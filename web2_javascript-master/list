@@ -1,0 +1,9 @@
+<!--북마크 기능으로 사용할 때 관습적으로 ! 붙임
+    → 링크가 생성된다(활성화)
+-->
+
+<li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
+<li><a href="#!css" onclick="fetchPage('css')">CSS</a></li>
+<li><a href="#!javascript" onclick="fetchPage('javascript')">JavaScript</a></li>
+<li><a href="#!ajax" onclick="fetchPage('ajax')">ajax</a></li>
+

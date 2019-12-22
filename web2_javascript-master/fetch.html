@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+
+    </article>
+
+    <!-- fatch를 클릭하면, css의 데이터를 가져옴 → 텍스트로 resoponse.text() -->
+    <input type="button" value="REfresh" onclick="
+    /*
+    fetch('ajax').then(function(response){
+        response.text().then(function(text){
+            alert('ajax에 대해 알아볼까?');
+            document.querySelector('article').innerHTML = text;
+            });
+        });*/
+    // fetch('html') // : client가 server에게 'html' 파일을 가져오라고 요청함.
+    // then(function(){}) : client → server, ; 작업이 끝나면 다음 함수를 호출해라.
+    
+    // Asynchronous : 비동기
+    // fetch문을 처리하는 동안 다른 코드들을 실행함
+
+    // 익명함수
+    // function callbackme(){
+    //     console.log('Hi there!');
+    // }
+    // callbackme = function(){
+    //     console.log('Hi there!');
+    // };
+    fetch('node').then(function(response){
+        console.log(response.status);
+        if(response.status == '200'){
+            alert('GOOD');
+        }
+    });
+    // 동기적인 실행방식으로 작동될 경우, fetch 이하 코드의 실행이 끝나기 전까지는 아래 콘솔이 출력되지 않음.
+    console.log(1);
+    console.log(2);
+    ">
+</body>
+</html>
+
+<!-- 'css'의 데이터를 다운로드 받음. -->
+<!-- alert(text) 부분이 호출된다. -->
+<!-- text라는 변수 안에, 서버가 응답한 데이터가 들어있다. → 내가 넣은 부분 -->
+<!-- 익명함수 : 이름이 없는 함수 → 함수가 이름이 필요한 경우 : 여러 지점에서 호출할 때 -->
+<!-- 약속 : then에 callback 함수를 주게 되면, 콜백함수를 fetch API가 실행시킬 때, 
+    함수의 첫번째 인자 값으로는 response 객체를 가져온다. -->
+<!-- 함수를 호출할 때, response라는 객체를 입력값으로 주면서 호출할 것이다. -->
+<!-- status 200 : 웹 브라우저와 웹 서버가 통신할때, 웹서버가 응답하면서 파일을 정상적으로 찾았을때 → 성공! <> not found(404) -->
+<!-- response : fetch를 통해 요청했을때, 웹서버가 응답한 결과를 담은 객체-->

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - Welcome</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
+  <!--<script src="fetch.js"></script>-->
+</head>
+<body>
+  <h1><a href="#welcome">WEB</a></h1>
+  <a href="#click">click this!</a>
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+
+  <ol id = "nav"> <!-- DATA 영역 : 바뀔 수 있음 -->
+
+  </ol>
+
+  <article>
+
+  </article>
+  <script>
+  // article 내용을 채울 함수 만들기
+  function fetchPage(name){
+    fetch(name).then(function(response){
+      response.text().then(function(text){
+        document.querySelector('article').innerHTML = text;
+      });
+    });
+  }
+
+  // 정확한 링크 표시
+  if(location.hash){
+    fetchPage(location.hash.substr(2));
+  }else{
+    fetchPage('welcome');
+  }
+  /*
+  // 메뉴 표시
+  fetch('list').then(function(response){
+    response.text().then(function(text){
+      document.querySelector('#nav').innerHTML = text;
+    });
+  });
+  */
+
+  fetch('list2').then(function(response){
+    response.text().then(function(text){
+      // console.log(text);
+      var items = text.split(',');
+      var tags = "";
+      for(var i =0; i<items.length; i++){
+        var item = items[i];
+        // console.log(item);
+        var tag = `<li><a href="#!${item}" onclick="fetchPage('${item}')">${item}</li>`;
+        tags = tags + tag;
+      }
+      console.log(tags);
+      document.querySelector('#nav').innerHTML = tags;
+    });
+  });
+  </script>
+</body>
+</html>
+
+<!--fetch('가져올 자원의 경로').then(function(response){
+  // response : 응답을 포함하는 약속 
+})-->
+
+<!-- 
+  hash 기능 사용하기 : 한 페이지 내에서 특정한 구분으로 나타냄 
+    → 그러나, URL을 사용하는 것과 비슷한 효과를 낼 수 있음.
+-->
+<!-- AJAX를 사용할 때 맹점
+  - 검색엔진 최적화가 잘 안됨.
+  - hash bang → pjax로 대체됨.
+-->

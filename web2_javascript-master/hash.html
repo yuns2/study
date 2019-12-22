@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#three">three</a>
+    <a href="#last">last</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quisquam cumque ipsam veniam, numquam tempore. Quasi unde facilis optio mollitia facere minima earum dignissimos eaque magni distinctio tempore, suscipit ipsa ut assumenda amet vitae sit itaque, voluptatibus temporibus rem odit inventore iusto. Doloribus non similique exercitationem minus. Consequatur libero blanditiis suscipit numquam quia voluptate est alias dolore aliquid ipsam sit saepe necessitatibus tenetur autem magnam consectetur, commodi, et recusandae voluptas voluptatum ad itaque sunt ipsa tempore. Rem, harum nesciunt nihil maiores praesentium hic a aut doloribus ab, voluptate vitae suscipit? Sed aperiam qui culpa nostrum eum eius corrupti sequi doloremque.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dicta fugit, odio nam distinctio, quisquam tenetur incidunt vero ex necessitatibus, placeat maiores similique in. Maiores officiis modi vel, laudantium quaerat sint impedit fuga a consequatur odio voluptates eius culpa cum distinctio tempore, quo sapiente beatae sed corrupti! Debitis suscipit neque enim repellendus! Beatae vitae unde quibusdam. Itaque, rerum, error optio fugiat voluptatem a, illo nihil alias minima atque beatae obcaecati unde! Similique hic quam illo adipisci obcaecati velit aut, cumque beatae fugit, ea exercitationem alias consequuntur dolorum! Facilis vero commodi expedita, modi, inventore nisi at id magnam in voluptatem earum!</p>
+
+    <p id="three">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut sed expedita maxime. Asperiores nisi, unde porro autem, cupiditate officia cum provident rerum, tempora est expedita assumenda vero quos! Veritatis architecto alias recusandae voluptas, eligendi quos blanditiis dolorem dolores quia, vitae deserunt ipsam voluptates quisquam repudiandae beatae? Reprehenderit ullam fuga quo natus cupiditate autem itaque ab perspiciatis in eaque deserunt, voluptatem possimus minus similique, officia laboriosam dolor eum, aspernatur maxime! Voluptatum deleniti sit aliquam ipsa quis quos, voluptatem animi voluptates, quam eveniet, amet dolores dolorem. Similique harum ratione iure nam nesciunt tenetur consectetur nisi, voluptatum obcaecati dolorem autem animi molestiae in ad ullam odio adipisci, quas dignissimos perspiciatis sapiente doloribus sunt? Non, cupiditate nemo? Dolor est dicta dolore veniam quos ullam?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolores magni adipisci optio? Iste aliquam illo dignissimos officia molestiae explicabo voluptas itaque vel commodi, esse debitis consequatur qui corrupti ut, totam magnam reprehenderit asperiores iusto? Explicabo fuga inventore, reprehenderit ab excepturi dicta magni amet eius iste quia asperiores earum rem fugit beatae quos quaerat error reiciendis a molestiae recusandae quae eaque cumque sunt! Porro velit quaerat, deleniti maxime dolor dicta autem molestiae sit, rerum, optio vitae minus assumenda consectetur voluptatem.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid ipsa, voluptatum nulla minima cumque distinctio doloribus maxime. Ratione nam recusandae repellat? Eum laboriosam fuga deleniti minima, nam nobis inventore quod a sapiente impedit, voluptatum deserunt cum! Amet veritatis quod iste? Quas consectetur illum esse quos odio deserunt quasi, cupiditate debitis. Minima praesentium sapiente architecto voluptates cumque accusamus aliquid sunt beatae. Repudiandae recusandae labore vel obcaecati, earum fugit explicabo. Suscipit soluta alias consequuntur voluptates reprehenderit sint rem commodi aut quia quis.
+
+    </p>
+    <p id="last">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, voluptatem corrupti eius quas, error molestiae obcaecati maxime, ducimus velit praesentium eligendi. Illo eos, quis rem perspiciatis quibusdam aspernatur iste molestiae tenetur, eaque ipsam laboriosam, accusantium officiis quidem ipsum non laborum doloremque optio modi facilis ut cumque esse similique ipsa. Aspernatur incidunt iste autem, neque vero corporis at. Expedita nostrum a veniam? Saepe officia dolore sequi ex est commodi deleniti deserunt. Repellat unde pariatur natus perferendis necessitatibus tenetur dolor quas quibusdam?</p>
+    <script>
+        /* location.hash : 해쉬표시가 있는 부분(앵커)의 위치
+        → hash 영역에 들어와 있을때만 콘솔에 표시가 된다.
+        */
+        console.log(location.hash);
+        if(location.hash){
+            console.log(location.hash.substr(1));
+        }else{}
+    </script>
+</body>
+</html>
+
+<!-- pregment : hash 기능을 사용할 때, 보여주려고 하는 구역 -->
+<!-- pregment idendify : pregment를 식별하는 id -->
+<!-- 
+hash 기능 사용하기 : 한 페이지 내에서 특정한 구분으로 나타냄 
+    → 그러나, URL을 사용하는 것과 비슷한 효과를 낼 수 있음.
+    (사용방법)
+    - 어떤 특정 위치로 이동하고 싶을 때, id값을 준다 
+    - index.html#last
+    - 페이지가 리로드되지 않고 특정한 위치로 이동하게 됨.
+-->
