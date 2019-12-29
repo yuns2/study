@@ -1,0 +1,5 @@
+console.log(1+1);
+console.log("1+1");
+console.log('1'+'1');
+
+console.log('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non arcu risus quis varius quam quisque id diam vel. Sem viverra aliquet eget sit amet tellus cras adipiscing. Id leo in vitae turpis massa sed elementum tempus. Felis imperdiet proin fermentum leo vel orci porta. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Eu lobortis elementum nibh tellus molestie nunc. Id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Ut tellus elementum sagittis vitae et leo. Cursus eget nunc scelerisque viverra mauris. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Scelerisque eu ultrices vitae auctor eu augue ut.'.length);
